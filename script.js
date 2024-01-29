@@ -1,5 +1,7 @@
 // Array with game options
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+let userScore = 0;
+let computerScore = 0;
 
 // Add click event listeners to buttons
 const buttons = document.querySelectorAll(".buttons");
@@ -21,6 +23,8 @@ function handleChoice(event) {
 
     // Update result in UI
     document.getElementById("result").textContent = result;
+
+    updateScore(1)
 }
 
 function determineWinner(userChoice, computerChoice) {
@@ -35,10 +39,19 @@ function determineWinner(userChoice, computerChoice) {
 
     // Check if user wins
     if (winConditions[userChoice].includes(computerChoice)) {
+        userScore++;
         return "You win!";
     } else if (computerChoice === userChoice) {
         return "It's a tie!";
     } else {
+        computerScore++;
         return "Computer wins!";
     }
 }
+
+function updateScore () {
+    document.getElementById("user-score").innerText = userScore;
+    document.getElementById("computer-score").innerText = computerScore;
+}
+
+updateScore()
