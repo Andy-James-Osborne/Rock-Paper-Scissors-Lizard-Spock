@@ -8,6 +8,12 @@
 </head>
 <body>
 
+    <div class="start-screen">
+        <h1>Rock Paper Scissors Lizard Spock!</h1>
+        <button>Start The Game!</button>
+    </div>
+
+
     <div class="container">
         <h1>Rock Paper Scissors Lizard Spock!</h1>
         <div class="buttons">
@@ -25,13 +31,18 @@
             <h2>Result</h2>
             <p id="result"></p>
         </div>
+        <div class="score-area">
+            <p>You Win = <span id="user-score">0</span></p>
+            <p>computer Win = <span id="computer-score">0</span></p>
+        </div>
     </div>
 
-    <div class="score-area">
-        <p>You Win = <span id="user-score">0</span></p>
-        <p>computer Win = <span id="computer-score">0</span></p>
+    <div class="game-over">
+        <h1>Want to play again?</h1>
+        <button class="reset-game">Play again?</button>
+        <button class="home-screen">Home Screen</button>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
