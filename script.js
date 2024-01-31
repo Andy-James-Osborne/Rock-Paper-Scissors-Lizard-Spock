@@ -105,6 +105,8 @@ function roundsForWinner() {
   
     gameScreen.style.display = "block";
     gameOverScreen.style.display = "none";
+
+    setupGameButtons();
   }
 
   function homeScreen() {
