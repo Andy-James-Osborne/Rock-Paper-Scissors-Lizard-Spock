@@ -106,7 +106,7 @@ function roundsForWinner() {
     gameScreen.style.display = "block";
     gameOverScreen.style.display = "none";
 
-    setupGameButtons();
+    setupGameButtons(); // This resets the score
   }
 
   function homeScreen() {
