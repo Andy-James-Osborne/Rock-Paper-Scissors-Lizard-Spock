@@ -110,8 +110,15 @@ function roundsForWinner() {
   }
 
   function homeScreen() {
+    userScore = 0;
+    computerScore = 0;
+    updateScore();
+    
     startScreen.style.display = "block";
     gameOverScreen.style.display = "none";
+
+    setupGameButtons(); // This resets the score
+    
   }
   
 
